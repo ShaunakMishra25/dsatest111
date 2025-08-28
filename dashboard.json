@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "totalProblems": 1,
+    "lastUpdated": "2025-08-28T14:11:17.662Z",
+    "breakdown": {
+      "Codechef": {
+        "total": 0,
+        "Easy": 0,
+        "Medium": 0,
+        "Hard": 0
+      },
+      "Gfg": {
+        "total": 0,
+        "Easy": 0,
+        "Medium": 0,
+        "Hard": 0
+      },
+      "Leetcode": {
+        "total": 1,
+        "Easy": 1,
+        "Medium": 0,
+        "Hard": 0
+      },
+      "Hackerrank": {
+        "total": 0,
+        "Easy": 0,
+        "Medium": 0,
+        "Hard": 0
+      }
+    }
+  },
+  "problems": [
+    {
+      "id": "leetcode-easy-two-sum",
+      "platform": "Leetcode",
+      "difficulty": "Easy",
+      "problemName": "Two Sum",
+      "language": "python",
+      "files": {
+        "code": "class Solution(object):\n    def twoSum(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :rtype: List[int]\n        \"\"\"\n        num_map={}\n        for i,num in enumerate(nums):\n            comp=target-num\n            if comp in num_map:\n                return [num_map[comp],i]\n            num_map[num]=i",
+        "readme": "ArrayHashTable\n\nGiven an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\n\nYou can return the answer in any order.\n\n \nExample 1:\n\nInput: nums = [2,7,11,15], target = 9\nOutput: [0,1]\nExplanation: Because nums[0] + nums[1] == 9, we return [0, 1].\n\n\nExample 2:\n\nInput: nums = [3,2,4], target = 6\nOutput: [1,2]\n\n\nExample 3:\n\nInput: nums = [3,3], target = 6\nOutput: [0,1]\n\n\n \nConstraints:\n\n\n\t2 <= nums.length <= 104\n\t-109 <= nums[i] <= 109\n\t-109 <= target <= 109\n\tOnly one valid answer exists.\n\n\n \nFollow-up: Can you come up with an algorithm that is less than O(n2) time complexity?",
+        "notes": "Two Sum\n\n          - Summary: This algorithm utilizes a hash map (dictionary in Python) to efficiently find two numbers within a list that add up to a target value. It iterates through the input list, calculating the complement needed to reach the target for each number. If the complement is found in the hash map, it means a pair has been identified, and their indices are returned. Otherwise, the current number and its index are added to the hash map for future checks.\n\n          - Time Complexity: O(n) because the algorithm iterates through the input list once.  Hash map lookups are O(1) on average.\n          - Space Complexity: O(n) because in the worst case, the hash map might store all the numbers from the input list."
+      },
+      "hasCode": true,
+      "hasReadme": true,
+      "hasNotes": true,
+      "lastUpdated": "2025-08-28T14:11:17.660Z"
+    }
+  ]
+}
