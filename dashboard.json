@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalProblems": 3,
-    "lastUpdated": "2025-08-29T08:08:47.168Z",
+    "totalProblems": 4,
+    "lastUpdated": "2025-08-29T10:34:41.187Z",
     "breakdown": {
       "Codechef": {
         "total": 0,
@@ -16,9 +16,9 @@
         "Hard": 0
       },
       "Leetcode": {
-        "total": 2,
+        "total": 3,
         "Easy": 1,
-        "Medium": 1,
+        "Medium": 2,
         "Hard": 0
       },
       "Hackerrank": {
@@ -44,7 +44,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-29T08:08:47.026Z"
+      "lastUpdated": "2025-08-29T10:34:41.067Z"
     },
     {
       "id": "leetcode-easy-two-sum",
@@ -60,7 +60,23 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-29T08:08:47.028Z"
+      "lastUpdated": "2025-08-29T10:34:41.069Z"
+    },
+    {
+      "id": "leetcode-medium-longest-substring-without-repeating-characters",
+      "platform": "Leetcode",
+      "difficulty": "Medium",
+      "problemName": "Longest Substring Without Repeating Characters",
+      "language": "python",
+      "files": {
+        "code": "class Solution:\n    def lengthOfLongestSubstring(self, s: str) -> int:\n        \n        maxlen = 0\n        start = 0\n\n        seen = {}\n\n        for i, c in enumerate(s):\n\n            if c in seen and start <= seen[c]:\n                start = seen[c] + 1\n            else:\n                maxlen = max(maxlen, i-start+1)\n\n            seen[c] = i\n\n        return maxlen",
+        "readme": "HashTableStringSlidingWindow\n\nGiven a string s, find the length of the longest substring without duplicate characters.\n\n \nExample 1:\n\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3.\n\n\nExample 2:\n\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.\n\n\nExample 3:\n\nInput: s = \"pwwkew\"\nOutput: 3\nExplanation: The answer is \"wke\", with the length of 3.\nNotice that the answer must be a substring, \"pwke\" is a subsequence and not a substring.\n\n\n \nConstraints:\n\n\n\t0 <= s.length <= 5 * 104\n\ts consists of English letters, digits, symbols and spaces.",
+        "notes": ""
+      },
+      "hasCode": true,
+      "hasReadme": true,
+      "hasNotes": false,
+      "lastUpdated": "2025-08-29T10:34:41.071Z"
     },
     {
       "id": "leetcode-medium-reverse-words-in-a-string",
@@ -76,7 +92,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": false,
-      "lastUpdated": "2025-08-29T08:08:47.030Z"
+      "lastUpdated": "2025-08-29T10:34:41.072Z"
     }
   ]
 }
